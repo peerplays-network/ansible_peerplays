@@ -5,7 +5,8 @@
   user: bobinson.kb
   become: True
   gather_facts: True
-
+  
+ # various peerplays related roles can go here
   roles:
     - common
     #- monitoring  # Monitoring role should be last. See roles/monitoring/README.md
