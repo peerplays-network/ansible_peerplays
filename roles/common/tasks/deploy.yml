@@ -1,0 +1,24 @@
+
+- name: Copy SON scripts to nodes
+  copy: src=SON/scripts  dest=/home/qa/ mode=755 owner=qa group=qa
+
+
+# QA user is given all the files for installing
+
+- name: Set Ownerships
+  command: chown -R qa:qa /home/qa/scripts
+  become: yes
+  become_user: root
+
+- name: Set permissions
+  command: chmod -Rv 755 /home/qa/scripts/
+  become: yes
+  become_user: root
+
+- name: Download {{ job_id }} from Gitlab
+  #script: letsencrypt-gencert {{ domain }} creates=/etc/letsencrypt/live/{{ domain }}/privkey.pem
+  #script: SON/scripts/00-install-all-nodes.sh {{ job_id }} 
+  shell: /home/qa/scripts/00-install-all-nodes.sh {{ job_id }}
+  #become: yes
+  #become_user: root
+

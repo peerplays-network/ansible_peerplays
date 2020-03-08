@@ -1,0 +1,18 @@
+[sons]
+# hosts in the `sons` group  use vars defined in `group_vars/sons`
+# put your host's IP address or domain name below
+#
+
+
+
+#96.46.49.11
+
+
+
+
+# host IPs for witness group
+
+[witness]
+
+96.46.49.1
+

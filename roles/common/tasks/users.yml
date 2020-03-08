@@ -1,0 +1,10 @@
+- name: Create main user account
+  user: name={{ main_user_name }} state=present shell={{ main_user_shell }} groups=sudo
+
+- name: Create QA user account
+  user: 
+    name=qa state=present
+    shell={{ main_user_shell }}
+    groups=sudo
+    password='$6$aNRPWutIInHLsMKC$5GUQRQZsMJjRD77yx.DQcMwnTxuTIM4j3JBfZMBq2AlXtDvnw724kDtNaMQZLESbgqwzTL/nuAh5Wyl64a/C/.'
+

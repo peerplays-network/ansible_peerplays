@@ -1,0 +1,20 @@
+Port 22
+LogLevel VERBOSE
+PermitRootLogin no
+MaxAuthTries 3
+MaxSessions 2
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+ChallengeResponseAuthentication no
+UsePAM no
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PrintMotd yes
+TCPKeepAlive no
+Compression no
+ClientAliveCountMax 2
+UseDNS no
+Banner /etc/issue.net
+AcceptEnv LANG LC_*
+Subsystem       sftp    /usr/lib/openssh/sftp-server

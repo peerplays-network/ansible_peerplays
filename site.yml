@@ -1,0 +1,11 @@
+---
+# This is the top-level playbook that defines our entire infrastructure.
+
+- hosts: all
+  user: bobinson.kb
+  become: True
+  gather_facts: True
+
+  roles:
+    - common
+    #- monitoring  # Monitoring role should be last. See roles/monitoring/README.md
