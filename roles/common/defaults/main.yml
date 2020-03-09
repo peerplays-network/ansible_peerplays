@@ -4,6 +4,7 @@ main_user_shell: "/bin/bash"
 friendly_networks:
   - ""
 
+
 # encfs
 secret_root: '{{ inventory_dir | realpath }}'
 secret_name: 'secret'
@@ -11,8 +12,6 @@ secret: '{{ secret_root + "/" + secret_name }}'
 encfs_password: "{{ lookup('password', secret + '/' + 'encfs_password', length=32) }}"
 
 
-# let's encrypt
-letsencrypt_server: "https://acme-v01.api.letsencrypt.org/directory"
 
 # ssh
 kex_algorithms: "diffie-hellman-group-exchange-sha256"
