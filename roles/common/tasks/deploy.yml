@@ -16,7 +16,8 @@
   become_user: root
 
 - name: create installation directory
-  command: mkdir /var/opt/installs mode=755 owner=qa group=qa
+  file: state=directory path=/var/opt/installs group=qa owner=qa
+
 
 - name: Download {{ job_id }} from Gitlab
   #script: letsencrypt-gencert {{ domain }} creates=/etc/letsencrypt/live/{{ domain }}/privkey.pem
