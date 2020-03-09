@@ -8,3 +8,11 @@
     groups=sudo
     password='$6$aNRPWutIInHLsMKC$5GUQRQZsMJjRD77yx.DQcMwnTxuTIM4j3JBfZMBq2AlXtDvnw724kDtNaMQZLESbgqwzTL/nuAh5Wyl64a/C/.'
 
+
+## SSH setup on the QA user
+
+- name: SSH setup on the QA user
+  command: mkdir /home/qa/.ssh mode=600 owner=qa group=qa
+
+- name: Copy SON scripts to nodes
+  copy: src=secret/qa_id_ecdsa.pub dest=/home/qa/.ssh mode=600 owner=qa group=qa

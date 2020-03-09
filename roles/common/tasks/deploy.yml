@@ -5,12 +5,12 @@
 
 # QA user is given all the files for installing
 
-- name: Set Ownerships
+- name: Set Ownerships for SON scripts
   command: chown -R qa:qa /home/qa/scripts
   become: yes
   become_user: root
 
-- name: Set permissions
+- name: Set permissions for SON scripts
   command: chmod -Rv 755 /home/qa/scripts/
   become: yes
   become_user: root
