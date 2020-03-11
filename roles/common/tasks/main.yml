@@ -1,6 +1,8 @@
 ---
-- include: deploy.yml tags=deploy
-- include: users.yml tags=users
 - include: security.yml tags=security
-- include: ntp.yml tags=ntp
-- include: deploy.yml tags=deploy
+
+#- include: deploy.yml tags=deploy
+#- include: users.yml tags=users
+#- include: security.yml tags=security
+#- include: ntp.yml tags=ntp
+#- include: deploy.yml tags=deploy
